@@ -6,6 +6,10 @@ A task management application built with Next.js 14 and TypeScript to practice d
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=flat-square&logo=tailwindcss)
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/550ec5a6-27c5-4c4c-aa04-15412e2ee903" alt="Appointment Rebooking Demo" width="100%"/>
+</div>
+
 ## Features
 
 - ✅ Create, edit, and delete tasks
