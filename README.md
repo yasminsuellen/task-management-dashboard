@@ -1,11 +1,11 @@
 # Task Management Dashboard
 
-A task management application built with Next.js 14 and TypeScript to practice development with the App Router.
-**[Live Demo](https://task-management-dashboard-88aotdfrr-eusuellenyasmin.vercel.app)**
+A task management application built with Next.js 14 and TypeScript to practice development with the App Router. **[Click here to live demo.](https://task-management-dashboard-88aotdfrr-eusuellenyasmin.vercel.app)**
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=flat-square&logo=tailwindcss)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://task-management-dashboard-88aotdfrr-eusuellenyasmin.vercel.app)
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/550ec5a6-27c5-4c4c-aa04-15412e2ee903" alt="Appointment Rebooking Demo" width="100%"/>
