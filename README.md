@@ -1,6 +1,7 @@
 # Task Management Dashboard
 
 A task management application built with Next.js 14 and TypeScript to practice development with the App Router.
+**[Live Demo](https://task-management-dashboard-88aotdfrr-eusuellenyasmin.vercel.app)**
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=flat-square&logo=typescript)
@@ -12,11 +13,11 @@ A task management application built with Next.js 14 and TypeScript to practice d
 
 ## Features
 
-- ✅ Create, edit, and delete tasks
-- ✅ Filter by status, priority, and tags
-- ✅ Sort by date, priority, or creation date
-- ✅ Data persistence with localStorage
-- ✅ Responsive interface
+- Create, edit, and delete tasks
+- Filter by status, priority, and tags
+- Sort by date, priority, or creation date
+- Data persistence with localStorage
+- Responsive interface
 
 ## Tech Stack
 
