@@ -72,5 +72,4 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
-**Yasmin Suellen**  
-[GitHub](https://github.com/yasminsuellen) · [LinkedIn](https://www.linkedin.com/in/yasminsuellen/)
+**Yasmin Suellen** [GitHub](https://github.com/yasminsuellen) · [LinkedIn](https://www.linkedin.com/in/yasminsuellen/)
