@@ -85,7 +85,7 @@ export default function FilterBar({ filters, onFilterChange, availableTags }: Fi
       </div>
 
       {(filters.searchTerm || filters.status || filters.priority || (filters.tags && filters.tags.length > 0)) && (
-        <div className="mt-4 flex items-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center gap-2">
           <span className="text-sm text-gray-600">Active filters:</span>
           {filters.searchTerm && (
             <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">

@@ -17,7 +17,7 @@ export default function StatCard({ title, value, icon, color, subtitle }: StatCa
           <p className={`text-3xl font-bold mt-2 ${color}`}>{value}</p>
           {subtitle && <p className="text-xs text-gray-500 mt-1">{subtitle}</p>}
         </div>
-        <div className={`${color} opacity-20 p-3 rounded-full`}>
+        <div className={`hidden md:flex ${color} opacity-20 p-3 rounded-full`}>
           {icon}
         </div>
       </div>
