@@ -60,28 +60,23 @@ export default function FilterBar({ filters, onFilterChange, availableTags }: Fi
         </div>
 
         <div>
-          <label htmlFor="tags" className="block text-sm font-medium text-gray-700 mb-1">
-            Tags
-          </label>
-          <select
-            id="tags"
-            multiple
-            value={filters.tags || []}
-            onChange={(e) => {
-              const selectedTags = Array.from(e.target.selectedOptions, option => option.value);
-              onFilterChange({ ...filters, tags: selectedTags.length > 0 ? selectedTags : undefined });
-            }}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-            size={3}
-          >
-            {availableTags.map((tag) => (
-              <option key={tag} value={tag}>
-                #{tag}
-              </option>
-            ))}
-          </select>
-          <p className="text-xs text-gray-500 mt-1">Hold Ctrl/Cmd to select multiple</p>
-        </div>
+  <label htmlFor="tags" className="block text-sm font-medium text-gray-700 mb-1">
+    Tags
+  </label>
+  <select
+    id="tags"
+    value={filters.tags?.[0] || ''}
+    onChange={(e) => onFilterChange({ ...filters, tags: e.target.value ? [e.target.value] : undefined })}
+    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+  >
+    <option value="">All Tags</option>
+    {availableTags.map((tag) => (
+      <option key={tag} value={tag}>
+        #{tag}
+      </option>
+    ))}
+  </select>
+</div>
       </div>
 
       {(filters.searchTerm || filters.status || filters.priority || (filters.tags && filters.tags.length > 0)) && (

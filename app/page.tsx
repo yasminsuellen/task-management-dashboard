@@ -15,6 +15,7 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
   const [sortBy, setSortBy] = useState<'dueDate' | 'priority' | 'createdAt'>('dueDate');
+  const [scrolled, setScrolled] = useState(false);
 
   // Initialize tasks from localStorage or mock data
   useEffect(() => {
@@ -26,11 +27,17 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Save tasks to localStorage whenever they change
   useEffect(() => {
     if (tasks.length > 0) {
       localStorage.setItem('tasks', JSON.stringify(tasks));
-    }
+    } 
   }, [tasks]);
 
   // Filter and sort tasks
@@ -89,16 +96,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <header className={`bg-blue-600 shadow-sm sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'md:py-0' : ''}`}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? 'py-6 md:py-3' : 'py-6'}`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="text-center md:text-left">
-              <h1 className="text-3xl font-bold text-gray-900">Task Management Dashboard</h1>
-              <p className="text-gray-600 mt-1">Organize and track your projects efficiently</p>
+              <h1 className="text-3xl font-bold text-white">Task Management Dashboard</h1>
+              <p className={`text-white overflow-hidden transition-all duration-300 max-h-8 opacity-100 mt-1 ${scrolled ? 'md:max-h-0 md:opacity-0 md:mt-0' : ''}`}>
+                Organize and track your projects efficiently.
+              </p>
             </div>
             <button
               onClick={handleCreateNew}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center gap-2 w-full md:w-auto justify-center"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-100 transition-colors font-medium flex items-center gap-2 w-full md:w-auto justify-center"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
