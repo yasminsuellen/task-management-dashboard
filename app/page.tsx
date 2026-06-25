@@ -100,7 +100,7 @@ export default function Home() {
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? 'py-6 md:py-3' : 'py-6'}`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="text-center md:text-left">
-              <h1 className="text-3xl font-bold text-white">Task Management Dashboard</h1>
+              <h1 className="text-xl sm:text-3xl font-bold text-white">Task Management Dashboard</h1>
               <p className={`text-white overflow-hidden transition-all duration-300 max-h-8 opacity-100 mt-1 ${scrolled ? 'md:max-h-0 md:opacity-0 md:mt-0' : ''}`}>
                 Organize and track your projects efficiently.
               </p>
